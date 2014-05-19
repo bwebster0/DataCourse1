@@ -17,7 +17,8 @@ corr <- function(directory, threshold = 0) {
             data<-read.csv(cfile)
             cdata<-subset(data,TRUE,c(sulfate, nitrate))
             res<-cor(cdata[,1],cdata[,2],use = "pairwise.complete.obs")
-            out<-c(out,round(res,5))
+            ##out<-c(out,round(res,5))
+            out<-c(out,res)
         }
     }
     out
